@@ -17,6 +17,11 @@
 - 2021.03.29 ~ 2021.04.07 (9일)
 
 ## 구동 사진
+![게스트_메인](https://user-images.githubusercontent.com/62881936/113835009-79efa780-97c6-11eb-960e-f69e17fec670.jpg)
+![게스트_팝업](https://user-images.githubusercontent.com/62881936/113835012-7b20d480-97c6-11eb-8445-6d32148f79be.jpg)
+![관리자_로그인](https://user-images.githubusercontent.com/62881936/113835014-7b20d480-97c6-11eb-9d23-aca890a7965d.jpg)
+![관리자_메인](https://user-images.githubusercontent.com/62881936/113835016-7bb96b00-97c6-11eb-843e-8f3490dd4afa.jpg)
+![관리자_팝업](https://user-images.githubusercontent.com/62881936/113835018-7bb96b00-97c6-11eb-96c8-a0a81258e645.jpg)
 
 ## 구현 설명
 - 고객이 보는 페이지에 따로 로그인 버튼은 추가하지 않고, 우측 상단 보이자 않는버튼을 눌러 로그인 팝업이 나오도록 구현하였다.
