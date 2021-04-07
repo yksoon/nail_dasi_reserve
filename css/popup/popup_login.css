@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+.hidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
+
+#custom_popup_login{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+    display: none;
+    border: none !important;
+}
+
+#popup_login * {
+    letter-spacing: -0.5px;
+}
+
+#popup_login .pl_body {
+	width: 100%;
+    height: 100%;
+}
+
+#popup_login .pl_body_content {
+    height: 294px;
+    width: 244px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px -3px 20px #0000001A;
+    opacity: 1;
+    padding: 10px 15px 15px 15px;
+    margin-bottom: 54;
+    overflow: scroll;
+    border-radius: 10px;
+
+    position: absolute;
+    
+    /* position : absolute한 btn-area가 텍스트를 가리므로 아래로 밀어냄 */
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+#popup_login .pl_close {
+    text-align: right;
+}
+#popup_login .pl_close_btn {
+    width: 12px;
+    height: 12px;
+}
+#popup_login .pl_title {
+    text-align: left;
+    font: normal normal bold 17px/17px SpoqaHanSans;
+    color: #595959;
+}
+
+#popup_login .pl_mid_content {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#popup_login .pl_top_container {
+    height: fit-content;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+#popup_login .pl_id_container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+#popup_login .pl_id_title {
+    font: normal normal bold 14px/25px SpoqaHanSans;
+    color: #595959;
+}
+#popup_login .pl_id {
+    width: 170px;
+}
+#popup_login .pl_id_input {
+    width: 100%;
+    height: 100%;
+    box-sizing : border-box;
+}
+
+#popup_login .pl_pw_container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+#popup_login .pl_pw_title {
+    font: normal normal bold 14px/25px SpoqaHanSans;
+    color: #595959;
+}
+#popup_login .pl_pw {
+    width: 170px;
+}
+#popup_login .pl_pw_input {
+    width: 100%;
+    height: 100%;
+    box-sizing : border-box;
+}
+#popup_login .pl_btn_container {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+}
+#popup_login .pl_login_btn {
+    width: 100px;
+    height: 40px;
+    font: normal normal bold 14px/40px SpoqaHanSans;
+    background: cornflowerblue;
+    color: #FFFFFF;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}
