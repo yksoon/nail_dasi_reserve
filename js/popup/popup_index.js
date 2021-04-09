@@ -358,7 +358,20 @@ function pi_update_status(stat, search_date) {
         },
         timeout: 30000,
         success: function () {
-            location.href = 'index.jsp';
+            var search_month = $('#index_month_select').val();
+
+            today = new Date();
+            year = today.getFullYear();
+
+            var searchYear = year;
+            month = search_month;
+
+            getNewInfo();
+
+            $("html, body").css({ "overflow": "auto", "height": "auto" });
+            $('#custom_popup_index').unbind('touchmove');
+
+            $('#custom_popup_index').hide();
         },
         error: function (request, status, error) {
             console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
@@ -378,7 +391,20 @@ function pi_set_status(stat, search_date) {
         },
         timeout: 30000,
         success: function () {
-            location.href = 'index.jsp';
+            var search_month = $('#index_month_select').val();
+
+            today = new Date();
+            year = today.getFullYear();
+
+            var searchYear = year;
+            month = search_month;
+
+            getNewInfo();
+
+            $("html, body").css({ "overflow": "auto", "height": "auto" });
+            $('#custom_popup_index').unbind('touchmove');
+
+            $('#custom_popup_index').hide();
         },
         error: function (request, status, error) {
             console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);

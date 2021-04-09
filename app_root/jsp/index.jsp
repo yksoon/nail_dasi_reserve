@@ -11,9 +11,9 @@
 <script src="../../js/jquery/jquery-3.6.0.min.js" ></script>
 
 <!-- JS -->
-<script type="text/javascript" src="../../js/index.js?ver=1.1.0" ></script>
+<script type="text/javascript" src="../../js/index.js?ver=1.1.1" ></script>
 <script type="text/javascript" src="../../js/index_func.js?ver=1.0.7" ></script>
-<script type="text/javascript" src="../../js/popup/popup_index.js?ver=1.0.8" ></script>
+<script type="text/javascript" src="../../js/popup/popup_index.js?ver=1.0.9" ></script>
 <script type="text/javascript" src="../../js/popup/popup_login.js?ver=1.0.4" ></script>
 
 <!-- CSS -->

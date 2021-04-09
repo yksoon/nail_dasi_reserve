@@ -74,6 +74,7 @@ function getNewInfo() {
 // 예약 가능 여부 확인해서 색칠해줌
 function cantReservation(year, month) {
     $('.cal-day-div').css("background", "none");
+    $('.cal-day-div').attr("class", "cal-day-div");
 
     var month = String(month);
     if (month.length === 1) {
@@ -114,6 +115,8 @@ function cantReservation(year, month) {
     });
 }
 
+
+
 // 팝업 닫기 버튼
 function close_pi_popup() {
     $("html, body").css({ "overflow": "auto", "height": "auto" });
@@ -121,7 +124,7 @@ function close_pi_popup() {
 
     $('#custom_popup_index').hide();
 
-    location.href = 'index.jsp';
+    // location.href = 'index.jsp';
 }
 
 // 팝업 닫기 버튼
