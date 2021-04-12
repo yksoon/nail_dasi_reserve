@@ -119,7 +119,8 @@
     height: 20px;
     padding: 5px;
     border-radius: 5px;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 .index_openkakao_img_div {
     display: flex;
@@ -128,10 +129,6 @@
 .index_openkakao_img {
     width: 15px;
     height: 15px;
-}
-.index_openkakao_btn {
-    display: flex;
-    align-items: center;
 }
 .index_openkakao_text_div {
     height: 20px;
