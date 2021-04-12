@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/nanumpenscript.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="../../css/index.css?ver=1.1.5" />
+<link type="text/css" rel="stylesheet" href="../../css/index.css?ver=1.1.6" />
 <link type="text/css" rel="stylesheet" href="../../css/popup/popup_index.css?ver=1.1.1" />
 <link type="text/css" rel="stylesheet" href="../../css/popup/popup_login.css?ver=1.0.1" />
 
