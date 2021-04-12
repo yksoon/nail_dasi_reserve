@@ -97,7 +97,7 @@
 #popup_index .pi_able {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 #popup_index .pi_able p {
     font: normal normal bold 14px/25px SpoqaHanSans;
@@ -212,4 +212,42 @@
 #popup_index .pi_anable_img {
     width: 20px;
     height: 20px;
+}
+
+
+#popup_index .pi_openkakao_container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#popup_index .pi_openkakao_btn {
+    /* background: #F7E600; */
+    background: #FFFACD;
+    /* width: 85px; */
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+}
+#popup_index .pi_openkakao_img_div {
+    display: flex;
+    align-items: center;
+}
+#popup_index .pi_openkakao_img {
+    width: 15px;
+    height: 15px;
+}
+#popup_index .pi_openkakao_btn {
+    display: flex;
+    align-items: center;
+}
+#popup_index .pi_openkakao_text_div {
+    height: 20px;
+    margin-left: 5px;
+}
+#popup_index .pi_openkakao_text_div p {
+    font: normal normal bold 13px/20px Noto Sans KR;
+    color: #333333;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }

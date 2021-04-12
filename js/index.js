@@ -126,3 +126,14 @@ $(document).on('click', '#index_openkakao_btn', function () {
     window.open("https://open.kakao.com/o/s0MiKxJc");
 });
 
+
+$(document).on("click", function (e) {
+    if ($("#custom_popup_index").is(e.target)) {
+        //  $("#custom_popup_index").css({ visibility:"hidden", 
+        //                             opacity:0 });
+        $("html, body").css({ "overflow": "auto", "height": "auto" });
+        $('#custom_popup_index').unbind('touchmove');
+
+        $('#custom_popup_index').hide();
+    }
+});

@@ -196,6 +196,16 @@ function pi_get_unable_list(day) {
                 } else {
                     var reserve = '<div class="pi_able">' +
                         '<p>예약은 카톡으로 문의해주세용 :)</p>' +
+                        '</div>' +
+                        '<div class="pi_openkakao_container">' +
+                        '<div class="pi_openkakao_btn" id="pi_openkakao_btn">' +
+                        '<div class="pi_openkakao_img_div">' +
+                        '<img src="../../img/index/kakao.png" class="pi_openkakao_img" />' +
+                        '</div>' +
+                        '<div class="pi_openkakao_text_div">' +
+                        '<p>openKakao</p>' +
+                        '</div>' +
+                        '</div>' +
                         '</div>';
                     $('.pi_mid_content').append(reserve);
                 }
@@ -304,6 +314,16 @@ function pi_get_unable_list(day) {
                 } else {
                     var reserve = '<div class="pi_able">' +
                         '<p>예약 가능 여부는 문의해주세요 :)</p>' +
+                        '</div>' +
+                        '<div class="pi_openkakao_container">' +
+                        '<div class="pi_openkakao_btn" id="pi_openkakao_btn">' +
+                        '<div class="pi_openkakao_img_div">' +
+                        '<img src="../../img/index/kakao.png" class="pi_openkakao_img" />' +
+                        '</div>' +
+                        '<div class="pi_openkakao_text_div">' +
+                        '<p>openKakao</p>' +
+                        '</div>' +
+                        '</div>' +
                         '</div>';
                     $('.pi_mid_content').append(reserve);
                 }
@@ -632,6 +652,16 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                         } else {
                             var reserve = '<div class="pi_able">' +
                                 '<p>예약은 카톡으로 문의해주세용 :)</p>' +
+                                '</div>' +
+                                '<div class="pi_openkakao_container">' +
+                                '<div class="pi_openkakao_btn" id="pi_openkakao_btn">' +
+                                '<div class="pi_openkakao_img_div">' +
+                                '<img src="../../img/index/kakao.png" class="pi_openkakao_img" />' +
+                                '</div>' +
+                                '<div class="pi_openkakao_text_div">' +
+                                '<p>openKakao</p>' +
+                                '</div>' +
+                                '</div>' +
                                 '</div>';
                             $('.pi_mid_content').append(reserve);
                         }
@@ -685,3 +715,7 @@ function pi_cancel_btn(date_time) {
     }
 
 }
+
+$(document).on('click', '#pi_openkakao_btn', function () {
+    window.open("https://open.kakao.com/o/s0MiKxJc");
+})
