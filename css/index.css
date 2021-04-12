@@ -107,12 +107,12 @@
     left: 5px;
 }
 
-.index_openkakao_container {
+#index .index_openkakao_container {
     margin-top: 40px;
     display: flex;
     justify-content: flex-end;
 }
-.index_openkakao_btn {
+#index .index_openkakao_btn {
     /* background: #F7E600; */
     background: #FFFACD;
     /* width: 85px; */
@@ -122,19 +122,19 @@
     display: flex;
     align-items: center;
 }
-.index_openkakao_img_div {
+#index .index_openkakao_img_div {
     display: flex;
     align-items: center;
 }
-.index_openkakao_img {
+#index .index_openkakao_img {
     width: 15px;
     height: 15px;
 }
-.index_openkakao_text_div {
+#index .index_openkakao_text_div {
     height: 20px;
     margin-left: 5px;
 }
-.index_openkakao_text_div p {
+#index .index_openkakao_text_div p {
     font: normal normal bold 13px/20px Noto Sans KR;
     color: #333333;
     margin: 0;
