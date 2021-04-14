@@ -137,3 +137,43 @@ $(document).on("click", function (e) {
         $('#custom_popup_index').hide();
     }
 });
+
+// 이전달
+$(document).on('click', '#pre_month', function () {
+    var now_month = $('#index_month_select').val();
+    now_month = parseInt(now_month);
+
+    var pre_month = now_month - 1;
+    console.log(pre_month);
+
+    var today = new Date();
+    var now_month_date = today.getMonth() + 1;
+    if (now_month_date != pre_month) {
+        return false;
+    }
+
+    $("#index_month_select").val(pre_month).prop("selected", true);
+    month = pre_month;
+
+    getNewInfo();
+})
+
+// 다음달
+$(document).on('click', '#next_month', function () {
+    var now_month = $('#index_month_select').val();
+    now_month = parseInt(now_month);
+
+    var next_month = now_month + 1;
+    console.log(next_month);
+
+    var today = new Date();
+    var now_month_date = today.getMonth() + 1;
+    if (now_month_date + 1 != next_month) {
+        return false;
+    }
+
+    $("#index_month_select").val(next_month).prop("selected", true);
+    month = next_month;
+
+    getNewInfo();
+})

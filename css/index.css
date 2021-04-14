@@ -1,5 +1,5 @@
 #index {
-    padding: 5px 15px 0 15px;
+    padding: 5px 20px 0 20px;
     text-align: center;
     letter-spacing: -0.5px;
     
@@ -21,10 +21,11 @@
     color: #333333;
 }
 #index .index_month_container {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    padding: 0 5px;
 }
 #index .index_month_select_div {
     width: 110px;
@@ -51,6 +52,7 @@
 }
 #index .index_cal {
     margin-top: 15px;
+    width: 100%;
 }
 #index .calendar {
     width: 100%;
@@ -111,6 +113,7 @@
     margin-top: 40px;
     display: flex;
     justify-content: flex-end;
+    padding: 0 5px;
 }
 #index .index_openkakao_btn {
     /* background: #F7E600; */
@@ -139,4 +142,23 @@
     color: #333333;
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
+}
+#index .index_main_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.index_arrow {
+    display: block;
+    width: 20px;
+    height: 70px;
+}
+.pre_month {
+    margin-left: -15px;
+    background: url("../img/index/back.svg") no-repeat 55% 50%;
+}
+.next_month {
+    margin-right: -15px;
+    background: url("../img/index/next.svg") no-repeat 35% 50%;
 }

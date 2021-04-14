@@ -11,7 +11,7 @@
 <script src="../../js/jquery/jquery-3.6.0.min.js" ></script>
 
 <!-- JS -->
-<script type="text/javascript" src="../../js/index.js?ver=1.1.2" ></script>
+<script type="text/javascript" src="../../js/index.js?ver=1.1.3" ></script>
 <script type="text/javascript" src="../../js/index_func.js?ver=1.0.7" ></script>
 <script type="text/javascript" src="../../js/popup/popup_index.js?ver=1.1.0" ></script>
 <script type="text/javascript" src="../../js/popup/popup_login.js?ver=1.0.4" ></script>
@@ -20,12 +20,12 @@
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/nanumpenscript.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="../../css/index.css?ver=1.1.6" />
+<link type="text/css" rel="stylesheet" href="../../css/index.css?ver=1.1.7" />
 <link type="text/css" rel="stylesheet" href="../../css/popup/popup_index.css?ver=1.1.1" />
 <link type="text/css" rel="stylesheet" href="../../css/popup/popup_login.css?ver=1.0.1" />
 
 </head>
-<body>
+<body style="margin: 0;">
 	<div id="index">
 
 		<!-- 팝업 -->
@@ -64,6 +64,7 @@
 					<!-- 월 option 들어갈 자리 -->
 				</select>
 				<span>&nbsp&nbsp월</span>
+
 			</div>
 			<div class="index_reserve_notice">
 				<div class="reserve_can">
@@ -79,10 +80,17 @@
 			</div>
 		</div>
 
-		<div class="index_cal" id="index_cal">
-			<!-- 달력 출력 부분 -->
-		</div>
+		<div class="index_main_content">
+			<div class="index_arrow pre_month" id="pre_month">
+			</div>
 
+			<div class="index_cal" id="index_cal">
+				<!-- 달력 출력 부분 -->
+			</div>
+
+			<div class="index_arrow next_month" id="next_month">
+			</div>
+		</div>
 	</div>
 </body>
 </html>
