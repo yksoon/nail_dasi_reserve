@@ -463,7 +463,30 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime) {
     var loginChk = sessionStorage.getItem("loginChk");
 
     // 예약시간 중복 체크
-    var chk = $('.pi_mid_content').children('div:contains("' + reserve_startTime + '")');
+    var chk_startHour = reserve_startTime.split(":")[0];
+    var chk_startMin = reserve_startTime.split(":")[1];
+
+    chk_startHour = parseInt(chk_startHour);
+
+    var chk_startHourString;
+
+    if (chk_startHour <= 12) {
+        chk_startHourString = String(chk_startHour);
+        var chk_finStartHour = "오전 " + chk_startHourString;
+    } else {
+        if (chk_startHour === 12) {
+            chk_startHourString = String(chk_startHour);
+        } else {
+            chk_startHour = chk_startHour - 12;
+            chk_startHourString = String(chk_startHour);
+            if (chk_startHourString.length === 1) {
+                chk_startHourString = "0" + chk_startHourString
+            }
+        }
+        var chk_finStartHour = "오후 " + chk_startHourString;
+    }
+    var chk_reserve_time = chk_finStartHour + ":" + chk_startMin;
+    var chk = $('.pi_mid_content').children('div:contains("' + chk_reserve_time + '")');
 
     if (chk.length == 0) {
         // console.log("없다");
@@ -472,6 +495,7 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime) {
         alert("해당시간은 등록 되어 있다. 소희야 ㅋㅋ")
         return false;
     }
+    //////// 예약시간 중복 체크 END
 
     $.ajax({
         type: "POST",
