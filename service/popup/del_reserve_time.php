@@ -20,15 +20,22 @@ mysqli_set_charset($con,"utf8");
 
 $reserve_date = $_REQUEST['reserve_date'];
 $reserve_startTime = $_REQUEST['reserve_startTime'];
-$reserve_endTime = $_REQUEST['reserve_endTime'];
+// $reserve_endTime = $_REQUEST['reserve_endTime'];
 
+
+// $row = mysqli_query($con, "
+//                             DELETE FROM 
+//                             able_reservation_time
+//                             WHERE RESERVE_DATE = '$reserve_date'
+//                             AND RESERVE_START_TIME = '$reserve_startTime'
+//                             AND RESERVE_END_TIME = '$reserve_endTime'
+//                             ");
 
 $row = mysqli_query($con, "
                             DELETE FROM 
                             able_reservation_time
                             WHERE RESERVE_DATE = '$reserve_date'
                             AND RESERVE_START_TIME = '$reserve_startTime'
-                            AND RESERVE_END_TIME = '$reserve_endTime'
                             ");
 
 // while ($row = mysqli_fetch_array($res)){
