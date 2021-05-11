@@ -316,7 +316,8 @@ function pi_get_unable_list(day) {
 
                 } else {
                     var reserve = '<div class="pi_able">' +
-                        '<p>예약 가능 여부는 문의해주세요 :)</p>' +
+                        '<p style="font: normal normal bold 14px/16px SpoqaHanSans;">현재 예약 가능</p>' +
+                        '<p style="font: normal normal bold 14px/16px SpoqaHanSans;">(11:00 ~ 06:30 예약 가능)</p>' +
                         '</div>' +
                         '<div class="pi_openkakao_container">' +
                         '<div class="pi_openkakao_btn" id="pi_openkakao_btn">' +
