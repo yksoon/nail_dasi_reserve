@@ -13,7 +13,7 @@
 <!-- JS -->
 <script type="text/javascript" src="../../js/index.js?ver=1.1.3" ></script>
 <script type="text/javascript" src="../../js/index_func.js?ver=1.0.7" ></script>
-<script type="text/javascript" src="../../js/popup/popup_index.js?ver=1.1.1" ></script>
+<script type="text/javascript" src="../../js/popup/popup_index.js?ver=1.1.2" ></script>
 <script type="text/javascript" src="../../js/popup/popup_login.js?ver=1.0.4" ></script>
 
 <!-- CSS -->
