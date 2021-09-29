@@ -8,7 +8,7 @@
 
 ## 개발 환경 및 사용 툴
 - 에디터 : VSCODE
-- 백엔드 : Apache 2.4, PHP 7.4
+- 백엔드 : Nginx, PHP 7.4
 - 프론트엔드 : Javascript, jQuery
 - DB : MariaDB 10
 - ETC : Google Web Font
