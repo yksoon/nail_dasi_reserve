@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('DB_SERVER','ksyongjs.synology.me:3307');
+define('DB_SERVER','ksyong1990.synology.me:3307');
 define('DB_USER','ksyong1234');
 define('DB_PASS' ,'Fhrhkd1490!');
 define('DB_NAME','nail_dasi');

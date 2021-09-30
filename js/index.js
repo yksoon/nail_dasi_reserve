@@ -68,7 +68,7 @@ $(document).on('click', '.cal-day-div', function () {
             pi_get_unable_list(value);
         });
     } else {        // 손님인 경우
-        if (classChk === "cal-day-div reserve_cant") {
+        if (classChk === "cal-day-div reserve_cant" || $(this).children(".cal-day").text() === '') {
             return false;
         } else {
             // console.log(value);
@@ -174,6 +174,51 @@ $(document).on('click', '#next_month', function () {
 
     $("#index_month_select").val(next_month).prop("selected", true);
     month = next_month;
+
+    getNewInfo();
+})
+
+$(document).on('swipeleft', function () {
+    $('#next_month').trigger("click");
+});
+$('#next_month').bind("click", function () {
+    var now_month = $('#index_month_select').val();
+    now_month = parseInt(now_month);
+
+    var next_month = now_month + 1;
+    console.log(next_month);
+
+    var today = new Date();
+    var now_month_date = today.getMonth() + 1;
+    if (now_month_date + 1 != next_month) {
+        return false;
+    }
+
+    $("#index_month_select").val(next_month).prop("selected", true);
+    month = next_month;
+
+    getNewInfo();
+})
+
+
+$(document).on('swiperight', function () {
+    $('#pre_month').trigger("click");
+});
+$('#pre_month').bind("click", function () {
+    var now_month = $('#index_month_select').val();
+    now_month = parseInt(now_month);
+
+    var pre_month = now_month - 1;
+    console.log(pre_month);
+
+    var today = new Date();
+    var now_month_date = today.getMonth() + 1;
+    if (now_month_date != pre_month) {
+        return false;
+    }
+
+    $("#index_month_select").val(pre_month).prop("selected", true);
+    month = pre_month;
 
     getNewInfo();
 })

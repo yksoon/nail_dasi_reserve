@@ -1,164 +1,162 @@
 #index {
-    padding: 5px 20px 0 20px;
-    text-align: center;
-    letter-spacing: -0.5px;
-    
+  padding: 5px 20px 0 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 
 #index .index_title {
-    /* font: normal normal bold 21px/28px SpoqaHanSans;
+  /* font: normal normal bold 21px/28px SpoqaHanSans;
     color: #333333; */
-
 }
 #index .title_p {
-    font: normal normal bold 21px/21px serif;
-    color: #333333;
-    font-style: oblique;
-    font-family: 'Noto Serif KR', serif;
+  font: normal normal bold 21px/21px serif;
+  color: #333333;
+  font-style: oblique;
+  font-family: "Noto Serif KR", serif;
 }
 #index .title_span {
-    font: normal normal bold 21px/21px SpoqaHanSans;
-    color: #333333;
+  font: normal normal bold 21px/21px SpoqaHanSans;
+  color: #333333;
 }
 #index .index_month_container {
-    /* width: 100%; */
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5px;
+  /* width: 100%; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
 }
 #index .index_month_select_div {
-    width: 110px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    height: 25px;
+  width: 110px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 25px;
 }
 #index .index_month_select {
-    width: 50px;
-    height: 100%;
-    border: 1px solid #D6D6D6;
-    font: normal normal normal 16px/16px SpoqaHanSans;
-    border-radius: 2px;
-    color: #666;
-    padding-left: 7px;
-    background: url(../img/index/down.svg) no-repeat 98% 50% #fff;
-    background-size: 25%;
-    appearance: none;
+  width: 50px;
+  height: 100%;
+  border: 1px solid #d6d6d6;
+  font: normal normal normal 16px/16px SpoqaHanSans;
+  border-radius: 2px;
+  color: #666;
+  padding-left: 7px;
+  background: url(../img/index/down.svg) no-repeat 98% 50% #fff;
+  background-size: 25%;
+  appearance: none;
 }
 #index .index_month_select_div span {
-    font: normal normal normal 18px/18px SpoqaHanSans;
-    color: #666;
+  font: normal normal normal 18px/18px SpoqaHanSans;
+  color: #666;
 }
 #index .index_cal {
-    margin-top: 15px;
-    width: 100%;
+  margin-top: 15px;
+  width: 100%;
 }
 #index .calendar {
-    width: 100%;
+  width: 100%;
 }
 #index .calendar th {
-    width: calc(100% / 7);
+  width: calc(100% / 7);
 }
 
 #index .index_reserve_notice {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 #index .index_notice_color {
-    width: 10px;
-    height: 10px;
-    border: solid 1px black;
-    border-radius: 3px;
+  width: 10px;
+  height: 10px;
+  border: solid 1px black;
+  border-radius: 3px;
 }
 #index .reserve_can {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 #index .reserve_can span {
-    margin-left: 2px;
-    font: normal normal normal 12px/10px SpoqaHanSans;
+  margin-left: 2px;
+  font: normal normal normal 12px/10px SpoqaHanSans;
 }
 #index .reserve_cannot {
-    margin-left: 7px;
-    display: flex;
-    align-items: center;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
 }
 #index .reserve_cannot span {
-    margin-left: 2px;
-    font: normal normal normal 12px/10px SpoqaHanSans;
+  margin-left: 2px;
+  font: normal normal normal 12px/10px SpoqaHanSans;
 }
 
 #index .reserve_can_color {
-    background: white;
+  background: white;
 }
 #index .reserve_cannot_color {
-    background: #D5C9DD;
+  background: #fae0d4;
 }
 
 #index .hidden_btn {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 #index .id_chk_admin {
-    position: absolute;
-    top: 5px;
-    left: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 #index .index_openkakao_container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 5px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5px;
 }
 #index .index_openkakao_btn {
-    /* background: #F7E600; */
-    background: #FFFACD;
-    /* width: 85px; */
-    height: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
+  background: #ffe812;
+  /* background: #fffacd; */
+  /* width: 85px; */
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 #index .index_openkakao_img_div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 #index .index_openkakao_img {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }
 #index .index_openkakao_text_div {
-    height: 20px;
-    margin-left: 5px;
+  height: 20px;
+  margin-left: 5px;
 }
 #index .index_openkakao_text_div p {
-    font: normal normal bold 13px/20px Noto Sans KR;
-    color: #333333;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+  font: normal normal bold 13px/20px Noto Sans KR;
+  color: #333333;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #index .index_main_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-.index_arrow {
-    display: block;
-    width: 20px;
-    height: 70px;
+#index .index_arrow {
+  display: block;
+  width: 20px;
+  height: 70px;
 }
-.pre_month {
-    margin-left: -15px;
-    background: url("../img/index/back.svg") no-repeat 55% 50%;
+#index .pre_month {
+  margin-left: -15px;
+  background: url("../img/index/back.svg") no-repeat 55% 50%;
 }
-.next_month {
-    margin-right: -15px;
-    background: url("../img/index/next.svg") no-repeat 35% 50%;
+#index .next_month {
+  margin-right: -15px;
+  background: url("../img/index/next.svg") no-repeat 35% 50%;
 }

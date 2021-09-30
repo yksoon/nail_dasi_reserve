@@ -30,7 +30,7 @@ $(document).on('click', '#pl_login_btn', function () {
                 $("html, body").css({ "overflow": "auto", "height": "auto" });
                 $('#custom_popup_login').unbind('touchmove');
 
-                location.href = 'index.jsp';
+                location.href = 'index.html';
             } else {
                 alert("아이디나 비밀번호를 확인 해주세요");
                 return false;
@@ -64,5 +64,5 @@ $(document).on('click', '#pl_logout_btn', function () {
     $("html, body").css({ "overflow": "auto", "height": "auto" });
     $('#custom_popup_login').unbind('touchmove');
 
-    location.href = 'index.jsp';
+    location.href = 'index.html';
 })

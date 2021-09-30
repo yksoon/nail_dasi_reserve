@@ -31,22 +31,22 @@ function pi_get_unable_list(day) {
                 $(data).each(function (i) {
                     var $RESERVE_DATE = data[i].RESERVE_DATE;
                     var $RESERVE_START_TIME = data[i].RESERVE_START_TIME;
-                    var $RESERVE_END_TIME = data[i].RESERVE_END_TIME;
+                    // var $RESERVE_END_TIME = data[i].RESERVE_END_TIME;
 
                     var startHour = $RESERVE_START_TIME.split(":")[0];
                     var startMin = $RESERVE_START_TIME.split(":")[1];
-                    var endHour = $RESERVE_END_TIME.split(":")[0];
-                    var endMin = $RESERVE_END_TIME.split(":")[1];
+                    // var endHour = $RESERVE_END_TIME.split(":")[0];
+                    // var endMin = $RESERVE_END_TIME.split(":")[1];
 
                     startHour = parseInt(startHour);
-                    endHour = parseInt(endHour);
+                    // endHour = parseInt(endHour);
 
                     var startHourString;
-                    var endHourString;
+                    // var endHourString;
 
                     if (startHour <= 12) {
                         startHourString = String(startHour);
-                        var finStartHour = "오전" + startHourString;
+                        var finStartHour = "오전 " + startHourString;
                     } else {
                         if (startHour === 12) {
                             startHourString = String(startHour);
@@ -57,36 +57,39 @@ function pi_get_unable_list(day) {
                                 startHourString = "0" + startHourString
                             }
                         }
-                        var finStartHour = "오후" + startHourString;
+                        var finStartHour = "오후 " + startHourString;
                     }
 
-                    if (endHour <= 12) {
-                        endHourString = String(endHour);
-                        var finEndHour = "오전" + endHourString;
-                    } else {
-                        if (endHour === 12) {
-                            endHourString = String(endHour);
-                        } else {
-                            endHour = endHour - 12;
-                            endHourString = String(endHour);
-                            if (endHourString.length === 1) {
-                                endHourString = "0" + endHourString
-                            }
+                    // if (endHour <= 12) {
+                    //     endHourString = String(endHour);
+                    //     var finEndHour = "오전 " + endHourString;
+                    // } else {
+                    //     if (endHour === 12) {
+                    //         endHourString = String(endHour);
+                    //     } else {
+                    //         endHour = endHour - 12;
+                    //         endHourString = String(endHour);
+                    //         if (endHourString.length === 1) {
+                    //             endHourString = "0" + endHourString
+                    //         }
 
-                        }
-                        var finEndHour = "오후" + endHourString;
-                    }
+                    //     }
+                    //     var finEndHour = "오후 " + endHourString;
+                    // }
 
-                    var reserve_time = finStartHour + ":" + startMin + " ~ " + finEndHour + ":" + endMin
+                    // var reserve_time = finStartHour + ":" + startMin + " ~ " + finEndHour + ":" + endMin
+                    var reserve_time = finStartHour + ":" + startMin;
 
                     var card;
                     if (loginChk === "Y") {
-                        card = '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '">' +
+                        card = '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '">' +
+                            // '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '">' +
                             '<div class="pi_unable_card">' +
                             // '<p>' + $RESERVE_START_TIME + ' ~ ' + $RESERVE_END_TIME + ' 예약 불가</p>' +
                             '<p>' + reserve_time + ' 예약 가능</p>' +
                             '</div>' +
-                            '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '\')">' +
+                            // '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '\')">' +
+                            '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '\')">' +
                             '<img class="pi_anable_img" src="../../img/popup/close_btn.svg" />' +
                             '</div>' +
                             '</div>';
@@ -108,8 +111,8 @@ function pi_get_unable_list(day) {
                         '<span>시간추가 :</span>' +
                         '<select class="pi_admin_startTime" id="pi_admin_startTime">' +
                         '</select>' +
-                        '<span>&nbsp~&nbsp</span>' +
-                        '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
+                        // '<span>&nbsp~&nbsp</span>' +
+                        // '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
                         '</select>' +
                         '</div>' +
                         '<div class="pi_admin_time_right">' +
@@ -155,7 +158,7 @@ function pi_get_unable_list(day) {
                             + min
                             + '</option>';
                         $('#pi_admin_startTime').append(option);
-                        $('#pi_admin_endTime').append(option);
+                        // $('#pi_admin_endTime').append(option);
                     }
 
                     $.ajax({
@@ -180,7 +183,7 @@ function pi_get_unable_list(day) {
                                         $("#pi_admin_reserve").val("Y").prop("selected", true);
                                     }
                                 })
-                                sessionStorage.setItem("reserve_date", search_date);;
+                                sessionStorage.setItem("reserve_date", search_date);
                                 sessionStorage.setItem("reserve_status", $("#pi_admin_reserve option:selected").val());
                                 sessionStorage.setItem("reserve_db_isin", "Y");
                             } else {
@@ -226,8 +229,8 @@ function pi_get_unable_list(day) {
                         '<span>시간추가 :</span>' +
                         '<select class="pi_admin_startTime" id="pi_admin_startTime">' +
                         '</select>' +
-                        '<span>&nbsp~&nbsp</span>' +
-                        '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
+                        // '<span>&nbsp~&nbsp</span>' +
+                        // '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
                         '</select>' +
                         '</div>' +
                         '<div class="pi_admin_time_right">' +
@@ -273,7 +276,7 @@ function pi_get_unable_list(day) {
                             + min
                             + '</option>';
                         $('#pi_admin_startTime').append(option);
-                        $('#pi_admin_endTime').append(option);
+                        // $('#pi_admin_endTime').append(option);
                     }
 
                     $.ajax({
@@ -313,7 +316,8 @@ function pi_get_unable_list(day) {
 
                 } else {
                     var reserve = '<div class="pi_able">' +
-                        '<p>예약 가능 여부는 문의해주세요 :)</p>' +
+                        '<p style="font: normal normal bold 14px/16px SpoqaHanSans;">현재 예약 가능</p>' +
+                        '<p style="font: normal normal bold 14px/16px SpoqaHanSans;">(11:00 ~ 06:30 예약 가능)</p>' +
                         '</div>' +
                         '<div class="pi_openkakao_container">' +
                         '<div class="pi_openkakao_btn" id="pi_openkakao_btn">' +
@@ -332,7 +336,7 @@ function pi_get_unable_list(day) {
 
 
             sessionStorage.setItem("reserve_startTime", $("#pi_admin_startTime option:selected").val());
-            sessionStorage.setItem("reserve_endTime", $("#pi_admin_endTime option:selected").val());
+            // sessionStorage.setItem("reserve_endTime", $("#pi_admin_endTime option:selected").val());
         },
         error: function (request, status, error) {
             console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
@@ -439,24 +443,60 @@ $(document).on('change', '#pi_admin_startTime', function () {
 });
 
 // 예약시간 추가 세션 변경 - 끝나는시간
-$(document).on('change', '#pi_admin_endTime', function () {
-    sessionStorage.removeItem("reserve_endTime");
-    sessionStorage.setItem("reserve_endTime", $(this).val());
-});
+// $(document).on('change', '#pi_admin_endTime', function () {
+//     sessionStorage.removeItem("reserve_endTime");
+//     sessionStorage.setItem("reserve_endTime", $(this).val());
+// });
 
 // 예약시간 추가 버튼
 $(document).on('click', '#pi_admin_append_btn', function () {
     var reserve_startTime = sessionStorage.getItem("reserve_startTime");
-    var reserve_endTime = sessionStorage.getItem("reserve_endTime");
+    // var reserve_endTime = sessionStorage.getItem("reserve_endTime");
     var reserve_date = sessionStorage.getItem("reserve_date");
 
     // console.log(reserve_date + ' - ' + reserve_startTime + ' ~ ' + reserve_endTime);
-    pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endTime);
+    // pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endTime);
+    pi_admin_set_reserve_time(reserve_date, reserve_startTime);
 });
 
 // 예약시간 추가 함수
-function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endTime) {
+function pi_admin_set_reserve_time(reserve_date, reserve_startTime) {
     var loginChk = sessionStorage.getItem("loginChk");
+
+    // 예약시간 중복 체크
+    var chk_startHour = reserve_startTime.split(":")[0];
+    var chk_startMin = reserve_startTime.split(":")[1];
+
+    chk_startHour = parseInt(chk_startHour);
+
+    var chk_startHourString;
+
+    if (chk_startHour <= 12) {
+        chk_startHourString = String(chk_startHour);
+        var chk_finStartHour = "오전 " + chk_startHourString;
+    } else {
+        if (chk_startHour === 12) {
+            chk_startHourString = String(chk_startHour);
+        } else {
+            chk_startHour = chk_startHour - 12;
+            chk_startHourString = String(chk_startHour);
+            if (chk_startHourString.length === 1) {
+                chk_startHourString = "0" + chk_startHourString
+            }
+        }
+        var chk_finStartHour = "오후 " + chk_startHourString;
+    }
+    var chk_reserve_time = chk_finStartHour + ":" + chk_startMin;
+    var chk = $('.pi_mid_content').children('div:contains("' + chk_reserve_time + '")');
+
+    if (chk.length == 0) {
+        // console.log("없다");
+    } else {
+        // console.log("중복");
+        alert("해당시간은 등록 되어 있다. 소희야 ㅋㅋ")
+        return false;
+    }
+    //////// 예약시간 중복 체크 END
 
     $.ajax({
         type: "POST",
@@ -464,8 +504,8 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
         url: '../../service/popup/set_reserve_time.php',
         data: {
             reserve_date: reserve_date,
-            reserve_startTime: reserve_startTime,
-            reserve_endTime: reserve_endTime
+            reserve_startTime: reserve_startTime
+            // reserve_endTime: reserve_endTime
         },
         timeout: 30000,
         success: function () {
@@ -486,22 +526,22 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                         $(data).each(function (i) {
                             var $RESERVE_DATE = data[i].RESERVE_DATE;
                             var $RESERVE_START_TIME = data[i].RESERVE_START_TIME;
-                            var $RESERVE_END_TIME = data[i].RESERVE_END_TIME;
+                            // var $RESERVE_END_TIME = data[i].RESERVE_END_TIME;
 
                             var startHour = $RESERVE_START_TIME.split(":")[0];
                             var startMin = $RESERVE_START_TIME.split(":")[1];
-                            var endHour = $RESERVE_END_TIME.split(":")[0];
-                            var endMin = $RESERVE_END_TIME.split(":")[1];
+                            // var endHour = $RESERVE_END_TIME.split(":")[0];
+                            // var endMin = $RESERVE_END_TIME.split(":")[1];
 
                             startHour = parseInt(startHour);
-                            endHour = parseInt(endHour);
+                            // endHour = parseInt(endHour);
 
                             var startHourString;
-                            var endHourString;
+                            // var endHourString;
 
                             if (startHour <= 12) {
                                 startHourString = String(startHour);
-                                var finStartHour = "오전" + startHourString;
+                                var finStartHour = "오전 " + startHourString;
                             } else {
                                 if (startHour === 12) {
                                     startHourString = String(startHour);
@@ -512,36 +552,39 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                                         startHourString = "0" + startHourString
                                     }
                                 }
-                                var finStartHour = "오후" + startHourString;
+                                var finStartHour = "오후 " + startHourString;
                             }
 
-                            if (endHour <= 12) {
-                                endHourString = String(endHour);
-                                var finEndHour = "오전" + endHourString;
-                            } else {
-                                if (endHour === 12) {
-                                    endHourString = String(endHour);
-                                } else {
-                                    endHour = endHour - 12;
-                                    endHourString = String(endHour);
-                                    if (endHourString.length === 1) {
-                                        endHourString = "0" + endHourString
-                                    }
+                            // if (endHour <= 12) {
+                            //     endHourString = String(endHour);
+                            //     var finEndHour = "오전 " + endHourString;
+                            // } else {
+                            //     if (endHour === 12) {
+                            //         endHourString = String(endHour);
+                            //     } else {
+                            //         endHour = endHour - 12;
+                            //         endHourString = String(endHour);
+                            //         if (endHourString.length === 1) {
+                            //             endHourString = "0" + endHourString
+                            //         }
 
-                                }
-                                var finEndHour = "오후" + endHourString;
-                            }
+                            //     }
+                            //     var finEndHour = "오후 " + endHourString;
+                            // }
 
-                            var reserve_time = finStartHour + ":" + startMin + " ~ " + finEndHour + ":" + endMin
+                            // var reserve_time = finStartHour + ":" + startMin + " ~ " + finEndHour + ":" + endMin
+                            var reserve_time = finStartHour + ":" + startMin;
 
                             var card;
                             if (loginChk === "Y") {
-                                card = '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '">' +
+                                card = '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '">' +
+                                    // '<div class="pi_card_container" id="' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '">' +
                                     '<div class="pi_unable_card">' +
                                     // '<p>' + $RESERVE_START_TIME + ' ~ ' + $RESERVE_END_TIME + ' 예약 불가</p>' +
                                     '<p>' + reserve_time + ' 예약 가능</p>' +
                                     '</div>' +
-                                    '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '\')">' +
+                                    // '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '_' + $RESERVE_END_TIME + '\')">' +
+                                    '<div class="pi_anable_img_div" id="pi-cancel-btn_' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '" onclick="pi_cancel_btn(\'' + $RESERVE_DATE + '_' + $RESERVE_START_TIME + '\')">' +
                                     '<img class="pi_anable_img" src="../../img/popup/close_btn.svg" />' +
                                     '</div>' +
                                     '</div>';
@@ -555,6 +598,7 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                             $('.pi_mid_content').append(card);
                         });
                         if (loginChk === "Y") {
+                            $('.pi_admin_container').empty();
                             $('.pi_mid_content').css("height", "138px");
 
                             var admin_append =
@@ -564,8 +608,8 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                                 '<span>시간추가 :</span>' +
                                 '<select class="pi_admin_startTime" id="pi_admin_startTime">' +
                                 '</select>' +
-                                '<span>&nbsp~&nbsp</span>' +
-                                '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
+                                // '<span>&nbsp~&nbsp</span>' +
+                                // '<select class="pi_admin_endTime" id="pi_admin_endTime">' +
                                 '</select>' +
                                 '</div>' +
                                 '<div class="pi_admin_time_right">' +
@@ -611,7 +655,7 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                                     + min
                                     + '</option>';
                                 $('#pi_admin_startTime').append(option);
-                                $('#pi_admin_endTime').append(option);
+                                // $('#pi_admin_endTime').append(option);
                             }
 
                             $.ajax({
@@ -636,13 +680,13 @@ function pi_admin_set_reserve_time(reserve_date, reserve_startTime, reserve_endT
                                                 $("#pi_admin_reserve").val("Y").prop("selected", true);
                                             }
                                         })
-                                        sessionStorage.setItem("reserve_date", search_date);;
+                                        sessionStorage.setItem("reserve_date", reserve_date);
                                         sessionStorage.setItem("reserve_status", $("#pi_admin_reserve option:selected").val());
                                         sessionStorage.setItem("reserve_db_isin", "Y");
                                     } else {
                                         $("#pi_admin_reserve").val("Y").prop("selected", true);
 
-                                        sessionStorage.setItem("reserve_date", search_date);;
+                                        sessionStorage.setItem("reserve_date", reserve_date);
                                         sessionStorage.setItem("reserve_status", $("#pi_admin_reserve option:selected").val());
                                         sessionStorage.setItem("reserve_db_isin", "N");
                                     }
@@ -683,13 +727,16 @@ function pi_cancel_btn(date_time) {
     dateTime = dateTime.split('_');
     var date = dateTime[0];
     var startTime = dateTime[1];
-    var endTime = dateTime[2];
+    // var endTime = dateTime[2];
+
     // console.log(date);
     // console.log(startTime);
     // console.log(endTime);
 
     // console.log(date_time);
-    var conf = confirm(date + "\n" + startTime + " ~ " + endTime + "\n해당 예약을 삭제 하시겠습니까?")
+
+    // var conf = confirm(date + "\n" + startTime + " ~ " + endTime + "\n해당 예약을 삭제 하시겠습니까?")
+    var conf = confirm(date + "\n" + startTime + "\n해당 예약을 삭제 하시겠습니까?")
     if (conf) {
 
 
@@ -700,11 +747,12 @@ function pi_cancel_btn(date_time) {
             data: {
                 reserve_date: date,
                 reserve_startTime: startTime,
-                reserve_endTime: endTime
+                // reserve_endTime: endTime
             },
             timeout: 30000,
             success: function () {
-                alert(date + "\n" + startTime + " ~ " + endTime + "\n삭제 되었습니다.")
+                // alert(date + "\n" + startTime + " ~ " + endTime + "\n삭제 되었습니다.");
+                alert(date + "\n" + startTime + "\n삭제 되었습니다.");
                 $(window[date_time]).remove();
             }
 

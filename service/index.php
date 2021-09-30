@@ -2,12 +2,12 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('DB_SERVER','ksyongjs.synology.me:3307');
+define('DB_SERVER','ksyong1990.synology.me:3307');
 define('DB_USER','ksyong1234');
 define('DB_PASS' ,'Fhrhkd1490!');
 define('DB_NAME','nail_dasi');
 
-$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
+$con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 mysqli_set_charset($con,"utf8");
 // Check connection
 if (mysqli_connect_errno())

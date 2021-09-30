@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('DB_SERVER','ksyongjs.synology.me:3307');
+define('DB_SERVER','ksyong1990.synology.me:3307');
 define('DB_USER','ksyong1234');
 define('DB_PASS' ,'Fhrhkd1490!');
 define('DB_NAME','nail_dasi');
@@ -20,13 +20,19 @@ mysqli_set_charset($con,"utf8");
 
 $reserve_date = $_REQUEST['reserve_date'];
 $reserve_startTime = $_REQUEST['reserve_startTime'];
-$reserve_endTime = $_REQUEST['reserve_endTime'];
+// $reserve_endTime = $_REQUEST['reserve_endTime'];
 
+
+// $row = mysqli_query($con, "
+//                             INSERT INTO
+//                             able_reservation_time (RESERVE_DATE, RESERVE_START_TIME, RESERVE_END_TIME)
+//                             VALUES('$reserve_date', '$reserve_startTime', '$reserve_endTime')
+//                             ");
 
 $row = mysqli_query($con, "
                             INSERT INTO
-                            able_reservation_time (RESERVE_DATE, RESERVE_START_TIME, RESERVE_END_TIME)
-                            VALUES('$reserve_date', '$reserve_startTime', '$reserve_endTime')
+                            able_reservation_time (RESERVE_DATE, RESERVE_START_TIME)
+                            VALUES('$reserve_date', '$reserve_startTime')
                             ");
 
 // while ($row = mysqli_fetch_array($res)){

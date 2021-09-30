@@ -15,7 +15,7 @@ function drawCalendar() {
     for (var i = 0; i < 6; i++) {
         setTableHTML += '<tr height="60">';
         for (var j = 0; j < 7; j++) {
-            setTableHTML += '<td style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap; border-radius:5px;" class="cal-day-div">';
+            setTableHTML += '<td style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap; border-radius:5px;" class="cal-day-div" data-role="none">';
             setTableHTML += '    <div class="cal-day"></div>';
             setTableHTML += '    <div class="cal-schedule"></div>';
             setTableHTML += '</td>';
@@ -103,7 +103,7 @@ function cantReservation(year, month) {
                 // console.log(month + "월???");
                 if ($RESERVATION_STATUS === "N") {
                     var day = $DATE.split("-")[2];
-                    $('#' + day).css("background", "#D5C9DD");
+                    $('#' + day).css("background", "#FAE0D4");
                     // $('#' + day).css("background", "#FBCBC9");
                     $('#' + day).attr("class", "cal-day-div reserve_cant");
                 }
@@ -134,5 +134,5 @@ function close_pl_popup() {
 
     $('#custom_popup_login').hide();
 
-    location.href = 'index.jsp';
+    location.href = 'index.html';
 }
